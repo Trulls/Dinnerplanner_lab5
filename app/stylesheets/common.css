@@ -1,38 +1,22 @@
-@font-face {
-    font-family: BalsamiqSansRegular;
-    src: url(Fonts/BalsamiqSansRegular.ttf);
-}
-@font-face {
-    font-family: BalsamiqSansBold;
-    src: url(Fonts/BalsamiqSansBold.ttf);
-}
-@font-face {
-    font-family: BalsamiqSansItalic;
-    src: url(Fonts/BalsamiqSansItalic.ttf);
-}
-@font-face {
-    font-family: BalsamiqSansBoldItalic;
-    src: url(Fonts/BalsamiqSansBoldItalic.ttf);
-}
-/*Header Containers*/
-body, html {
-  height: 100%;
-}
-.front-header-container {
-  background-color: rgba(247, 225, 134, 0.7);
-  height: 6em;
-  padding-top: 1em;
-  border: 3px solid black;
+
+/* Containers */
+
+.container {
+  background-color: white;
+  border: 1px solid black;
   border-radius: 3px;
 }
-.main-header-container {
+.main-header {
   background-color: rgba(204, 204, 204, 1);
-  height: 15%;
+  height: 10%;
   padding-top: 1em;
   border: 3px solid black;
-  border-radius: 3px;
   margin-left: 1px;
   margin-right: 1px;
+}
+.sidebar {
+  padding-top: 1em;
+  margin-left: 1px;
 }
 .sub-header-container {
   background-color: rgba(247, 225, 134, 0.7);
@@ -82,10 +66,7 @@ body, html {
   padding-bottom: 2em;
   margin-top: 6em;
 }
-.summary-box {
-  background-color: white;
-  padding-top: 1em;
-}
+
 
 .description-box {
   overflow: scroll;
@@ -140,23 +121,44 @@ body, html {
   overflow: scroll;
 }
 /*Fonts*/
+body, html {
+  height: 100%;
+}
 body{
   font-family: BalsamiqSansRegular;
-}
-.main-header {
-  font-size: 3em;
-  text-align: center;
-  font-family: BalsamiqSansBold;
 }
 a {
   color: black;
 }
-.sub-header {
+.title {
+  font-size: 3em;
+  text-align: center;
+  font-family: BalsamiqSansBold;
+}
+.subtitle {
   font-size: 1.5em;
   padding-top: 1em;
   font-family: BalsamiqSansItalic;
 }
-/*Deviders*/
+
+@font-face {
+    font-family: BalsamiqSansRegular;
+    src: url(Fonts/BalsamiqSansRegular.ttf);
+}
+@font-face {
+    font-family: BalsamiqSansBold;
+    src: url(Fonts/BalsamiqSansBold.ttf);
+}
+@font-face {
+    font-family: BalsamiqSansItalic;
+    src: url(Fonts/BalsamiqSansItalic.ttf);
+}
+@font-face {
+    font-family: BalsamiqSansBoldItalic;
+    src: url(Fonts/BalsamiqSansBoldItalic.ttf);
+}
+
+/*Dividers*/
 hr.divider {
   border: 0;
   height: 2px;
