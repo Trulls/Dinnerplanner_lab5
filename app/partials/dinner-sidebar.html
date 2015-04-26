@@ -1,18 +1,18 @@
-<div class="sidebar container col-xs-3">
+<div class="box col-xs-3">
   <h2>My Dinner <3</h2>
     <div class="col-xs-8">Number of people</div>
     <input class="col-xs-4" type="number" ng-model="numberOfGuests" ng-change="setNumberOfGuest(numberOfGuests)"/>
     </br>
     </br>
-  <div class="row sub-header-container selectdish-box">
+  <div class="row box subcolor padded">
     <div>
-      <div class="sub-content-box col-xs-8">Dish</div>
-      <div class="sub-content-box col-xs-4">Cost</div>
+      <div class="box col-xs-8">Dish</div>
+      <div class="box col-xs-4">Cost</div>
     </div>
-    <div id="selected-dishes"></div>
+    <div ng-repeat="for dish in dishes"></div>
     <div>
-      <div class="sub-content-box col-xs-8">Total SEK</div>
-      <div class="sub-content-box col-xs-4">{{getNumberOfGuests()}}</div>
+      <div class="box col-xs-8">Total SEK</div>
+      <div class="box col-xs-4">{{getNumberOfGuests()}}</div>
     </div>
     <a href="#" class="btn confirm-button confirm-dinner">Confirm dinner</a>
   </div>
