@@ -70,12 +70,12 @@ dinnerPlannerApp.factory('Dinner',function ($resource) {
 
   this.DishSearch = $resource(
     'http://api.bigoven.com/recipes',
-    {pg:1,rpp:25,api_key:'YOUR_API_KEY'}
+    {pg:1,rpp:25,api_key:'dvx6H6QTYoSVG1J9p9BaIcf097ZInDlP'}
   );
 
   this.Dish = $resource(
     'http://api.bigoven.com/recipe/:id',
-    {api_key:'YOUR_API_KEY'}
+    {api_key:'dvx6H6QTYoSVG1J9p9BaIcf097ZInDlP'}
   );
 
   // Angular service needs to return an object that has all the
@@ -85,92 +85,3 @@ dinnerPlannerApp.factory('Dinner',function ($resource) {
   return this;
 
 });
-
-// this.getAllRecipes = function (type, filter) {
-  //   var apiKey = "dvx6H6QTYoSVG1J9p9BaIcf097ZInDlP";
-  //   var pg = "1";
-  //   var rpp = "15";
-  //   var typeq = "&any_kw='" + type + "'";
-  //   var filterq = "";
-  //   if (filter) {
-  //     filterq = "&any_kw='" + filter + "'";
-  //   }
-  //   var url =   "http://api.bigoven.com/recipes?api_key=" + apiKey +
-  //         "&pg=" + pg + "&rpp=" + rpp + typeq + filterq;
-  //   var myModel = this;
-
-  //   $.ajax({
-  //         type: "GET",
-  //         dataType: 'json',
-  //         cache: false,
-  //         url: url,
-  //         success: function (data) {
-  //             //console.log("SUCCESS: ajax");
-  //             var _recipes = [];
-  //             for (var i=0; i<data.Results.length; i++) {
-  //               var dish = data.Results[i];
-  //               var recipe = {
-  //           'id':dish.RecipeID,
-  //           'name':dish.Title,
-  //           'type':type,
-  //           'image':dish.ImageURL
-  //         }
-  //         _recipes.push(recipe);
-  //       }
-  //       //console.log("Request done");
-  //       dishes = _recipes;
-  //       // spinner.stop();
-  //       }
-  //     });
-  //   };
-
-  // // Function that returns a dish of specific ID
-  // this.getDish = function (id, view) {
-  //   var apiKey = "dvx6H6QTYoSVG1J9p9BaIcf097ZInDlP";
-  //   var url =   "http://api.bigoven.com/recipe/" + id + "?api_key=" + apiKey;
-  //   var myModel = this;
-
-  //   $.ajax({
-  //         type: "GET",
-  //         dataType: 'json',
-  //         cache: true,
-  //         url: url,
-  //         success: function (data) {
-  //             //console.log("SUCCESS: ajax");
-  //             var dish = data;
-  //             var _recipe = {
-  //         'id':dish.RecipeID,
-  //         'name':dish.Title,
-  //         'type':dish.Category,
-  //         'image':dish.ImageURL,
-  //         'description':dish.Description,
-  //         'instruction':dish.Instructions,
-  //       }
-
-  //       var _ingredients = [];
-  //       var _totalPrice = 0;
-
-  //       dish.Ingredients.forEach(function (ingredient) {
-  //         var _quantity = ingredient.Quantity;
-  //         var _price = _quantity;
-  //         _totalPrice += _price;
-
-  //         var _ingredient = {
-  //           'name':ingredient.Name,
-  //           'quantity':_quantity,
-  //           'unit':ingredient.Unit,
-  //           'price':_price
-  //         }
-  //         _ingredients.push(_ingredient);
-  //       });
-
-  //       _recipe.ingredients = _ingredients;
-  //       _recipe.price = _totalPrice;
-
-  //       //console.log("Request done");
-  //       window.app.switchView(view);
-  //       currentDish = _recipe;
-  //       return _recipe;
-  //           }
-  //     });
-  // };
