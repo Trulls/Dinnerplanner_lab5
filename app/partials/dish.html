@@ -1,5 +1,38 @@
-<!-- We include the sidebar as it is shared across two screens. -->
-<ng-include src="'partials/dinner-sidebar.html'" ng-controller="DinnerCtrl"></ng-include>
-
 <!-- TODO in Lab 5: Display the dish information including image, Description, 
 Instructions, Ingredients and total cost. -->
+<div class="row">
+	<div class="box col-xs-3">
+		<ng-include src="'partials/dinner-sidebar.html'" ng-controller="DinnerCtrl"></ng-include>
+	</div>
+	<div class="box col-xs-9">
+		<div class="row">
+		  <div class="container col-xs-6">
+		  	<h2>{{dish.Title}}</h2>
+		  	<img class="dish-box" ng-src="{{dish.ImageURL}}"/>
+		  	<h3>Description</h3>
+		  	<p>{{dish.Description}}</p>
+		  	<h3>Preparation</h3>
+		  	<p>{{dish.Instructions}}</p>
+		  </div>
+		  <div class="box subcolor col-xs-6">
+		  	<h3>Ingredients for {{getNumberOfGuests()}} people</h3>
+		  	<div class="row" ng-repeat="ingredient in {{dish.ingredients}}">
+		  		<div class="col-xs-2">{{ingredient.quantity}}</div>
+		  		<div class="col-xs-4">{{ingredient.unit}}</div>
+		  		<div class="col-xs-4">{{ingredient.name}}</div>
+		  		<div class="col-xs-1">SEK</div>
+		  		<div class="col-xs-1">{{ingredient.price}}</div>
+		  	</div>
+		  	<hr class="divider"/>
+		  	<div class="row">
+		  		<div class="col-xs-8">
+		  			<a ng-href="#/search" class="btn start-button confirm-dish">Confirm dish</a>
+		  		</div>
+		  		<div class="col-xs-2">SEK</div>
+		  		<div class="col-xs-2">{{dish.price}}</div>
+		  		</div>
+		  	</div>
+		  </div>
+	  </div>
+	</div>
+</div>
