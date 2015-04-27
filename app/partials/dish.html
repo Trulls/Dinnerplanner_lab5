@@ -16,17 +16,17 @@ Instructions, Ingredients and total cost. -->
 		  </div>
 		  <div class="box subcolor col-xs-6">
 		  	<h3>Ingredients for {{getNumberOfGuests()}} people</h3>
-		  	<div class="row" ng-repeat="ingredient in {{dish.ingredients}}">
-		  		<div class="col-xs-2">{{ingredient.quantity}}</div>
-		  		<div class="col-xs-4">{{ingredient.unit}}</div>
-		  		<div class="col-xs-4">{{ingredient.name}}</div>
+		  	<div class="row" ng-repeat="ingredient in dish.Ingredients">
+		  		<div class="col-xs-2">{{ingredient.DisplayQuantity}}</div>
+		  		<div class="col-xs-2">{{ingredient.Unit}}</div>
+		  		<div class="col-xs-6">{{ingredient.Name}}</div>
 		  		<div class="col-xs-1">SEK</div>
-		  		<div class="col-xs-1">{{ingredient.price}}</div>
+		  		<div class="col-xs-1">{{ingredient.DisplayQuantity}}</div>
 		  	</div>
 		  	<hr class="divider"/>
 		  	<div class="row">
 		  		<div class="col-xs-8">
-		  			<a ng-href="#/search" class="btn start-button confirm-dish">Confirm dish</a>
+		  			<a ng-href="#/searchg" class="btn start-button confirm-dish">Confirm dish</a>
 		  		</div>
 		  		<div class="col-xs-2">SEK</div>
 		  		<div class="col-xs-2">{{dish.price}}</div>
