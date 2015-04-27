@@ -1,7 +1,8 @@
-/* Containers */
 body, html {
   height: 100%;
 }
+
+/* BOXES */
 .box {
   background-color: white;
   border: 1px solid black;
@@ -13,6 +14,8 @@ body, html {
 .spin-container {
   /* spin-container = box */
 }
+
+/* BOX EXTRAS */
 .subcolor {
   background-color: rgba(247, 225, 134, 0.7);
 }
@@ -23,16 +26,15 @@ body, html {
   height: 70%;
   overflow: scroll;
 }
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
 .bottom-box {
   /* bottom-box = scrollable */
-}
-
-/* HEADER */
-.main-header {
-  background-color: rgba(204, 204, 204, 1);
-  height: 10%;
-  padding-top: 1em;
-  border: 3px solid black;
 }
 .padded {
   height: 100%;
@@ -42,7 +44,15 @@ body, html {
   /* selectdish = padded */
 }
 
-/* Dish containers */
+/* HEADER */
+.main-header {
+  background-color: rgba(204, 204, 204, 1);
+  height: 10%;
+  padding-top: 1em;
+  border: 3px solid black;
+}
+
+/* DISH */
 .dish-container {
   width: 25%;
   margin: 5px;
@@ -65,7 +75,6 @@ body, html {
   font-size: 1em;
   height: 50px;
 }
-
 
 .content-box {
   background-color: white;
