@@ -24,6 +24,9 @@ body, html {
 .sub-header-container {
   /* sub-header-container = subcolor */
 }
+.ingredient-box {
+ /* ingredient-box = subcolor */ 
+}
 .scrollable {
   height: 70%;
   overflow: scroll;
@@ -112,11 +115,7 @@ body, html {
   overflow: scroll;
   height: 100%;
 }
-.ingredient-box {
-  background-color: rgba(247, 225, 134, 0.7);
-  border: 2px solid black;
-  border-radius: 3px;
-}
+
 
 .vertical-line {
   border-left: 2px solid black;
