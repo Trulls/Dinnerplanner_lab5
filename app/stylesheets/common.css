@@ -1,5 +1,7 @@
 body, html {
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden; 
 }
 
 /* BOXES */
@@ -32,9 +34,15 @@ body, html {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  align-items: stretch;
 }
 .bottom-box {
   /* bottom-box = scrollable */
+}
+.top-box {
+  height: 50%;
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 .padded {
   height: 100%;
@@ -50,6 +58,7 @@ body, html {
   height: 10%;
   padding-top: 1em;
   border: 3px solid black;
+  text-align: center;
 }
 
 /* DISH */
@@ -88,9 +97,7 @@ body, html {
 .confirm-n-print-box{
   padding-top: 5px;  
 }
-.top-box {
-  height: 30%;
-}
+
 
 
 .info-box {
