@@ -11,8 +11,7 @@ dinnerPlannerApp.factory('Dinner',function ($resource) {
   // check lab 5 instructions for details
   
   var numberOfGuest = 4;
-  var selectedDishes = {};
-  var currentDish = undefined;
+  var menu = {};
   var dishes = [];
 
   //Sets the number of guests
@@ -25,9 +24,9 @@ dinnerPlannerApp.factory('Dinner',function ($resource) {
     return numberOfGuest;
   }
 
-  //Returns the dish that is on the menu for selected type 
-  this.getSelectedDish = function (type) {
-    return selectedDishes[type];
+  //Returns the dish that is on the menu for selected category 
+  this.getSelectedDish = function (category) {
+    return menu[category];
   };
 
   //Returns all the dishes on the menu.
@@ -48,22 +47,25 @@ dinnerPlannerApp.factory('Dinner',function ($resource) {
   //ingredients multiplied by number of guests).
   this.getTotalMenuPrice = function () {
     var unitCost = 0;
-    _.each(this.selectedDishes, function (dish) {
+    _.each(this.menu, function (dish) {
       unitCost += dish.price;
     }, this);
     return unitCost * this.numberOfGuests;
   };
 
   //Adds the passed dish to the menu. If the dish of that 
-  //type already exists on the menu it is removed from 
+  //category already exists on the menu it is removed from 
   //the menu and the new one added.
-  this.addDishToMenu = function () {
-    this.selectedDishes[currentDish.type] = currentDish;
+  this.addDishToMenu = function (dish) {
+    console.log(dish);
+    console.log(dish.Category);
+    menu[dish.Category] = dish;
+    console.log(menu);
   }
 
   //Removes dish from menu
   this.removeDishFromMenu = function (id) {
-    _.reject(this.selectedDishes, function (dish) {
+    _.reject(this.menu, function (dish) {
       return dish.id === id;
     });
   }

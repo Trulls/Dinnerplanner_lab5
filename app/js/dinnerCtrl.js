@@ -14,9 +14,4 @@ dinnerPlannerApp.controller('DinnerCtrl', function ($scope,Dinner) {
 	$scope.getNumberOfGuests = function() {
 		return Dinner.getNumberOfGuests();
 	}
-
-	// Dinner.DishSearch.get({title_kw:'chicken'}) 
-	// or to get a single dish we would do 
-	// Dinner.Dish.get({id:12345}).
-
 });
