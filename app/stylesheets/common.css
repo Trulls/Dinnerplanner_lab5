@@ -58,6 +58,12 @@ body, html {
 .selectdish {
   /* selectdish = padded */
 }
+.center-align {
+  text-align: center;
+}
+.button-container {
+  /* button-container = center-align */
+}
 .flex {
   display: flex;
   flex-direction: row;
@@ -127,9 +133,6 @@ body, html {
   color: maroon;
   font-size: 18px;
 }
-.button-container {
-  text-align: center;
-}
 .print-container {
   overflow: scroll;
 }
@@ -165,6 +168,9 @@ a {
     font-family: BalsamiqSansBoldItalic;
     src: url(Fonts/BalsamiqSansBoldItalic.ttf);
 }
+.text-right {
+  text-align: right;
+}
 
 /* DIVIDERS */
 hr.divider {
@@ -186,6 +192,7 @@ hr.divider {
   color: black;
   box-shadow: 2px 2px 0px black;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .confirm-button {
   background-color: orange;
