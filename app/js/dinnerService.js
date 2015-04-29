@@ -10,62 +10,63 @@ dinnerPlannerApp.factory('Dinner',function ($resource) {
   // a bit to take the advantage of Angular resource service
   // check lab 5 instructions for details
   
-  var numberOfGuest = 4;
+  var numberOfGuests = 4;
   var menu = {};
-  var dishes = [];
 
   //Sets the number of guests
   this.setNumberOfGuests = function(num) {
-    numberOfGuest = num;
+    numberOfGuests = num;
   }
 
   //Returns the number of guests
   this.getNumberOfGuests = function() {
-    return numberOfGuest;
+    return numberOfGuests;
   }
 
-  //Returns the dish that is on the menu for selected category 
-  this.getSelectedDish = function (category) {
-    return menu[category];
-  };
-
-  //Returns all the dishes on the menu.
+  //Returns the full menu with all the dishes.
   this.getFullMenu = function () {
-    return dishes;
+    return menu;
   };
 
   //Returns all ingredients for all the dishes on the menu.
   this.getAllIngredients = function () {
     ingredients = [];
-    dishes.forEach(function (dish) {
+    menu.forEach(function (dish) {
       ingredients.push(_.pluck(dish.ingredients, 'name'));
     });
     return _.uniq(_.flatten(ingredients));
   };
 
+  //Returns the price of a specific dish (all the 
+  //ingredients multiplied by number of guests).
+  this.getPriceOfDish = function (dish) {
+    var unitCost = 0;
+    _.each(dish.Ingredients, function (ingredient) {
+      unitCost += ingredient.Quantity;
+    }, this);
+    return unitCost * numberOfGuests;
+  };
+
   //Returns the total price of the menu (all the 
   //ingredients multiplied by number of guests).
   this.getTotalMenuPrice = function () {
-    var unitCost = 0;
-    _.each(this.menu, function (dish) {
-      unitCost += dish.price;
+    var cost = 0;
+    _.each(menu, function (dish) {
+      cost += this.getPriceOfDish(dish);
     }, this);
-    return unitCost * this.numberOfGuests;
+    return cost;
   };
 
   //Adds the passed dish to the menu. If the dish of that 
   //category already exists on the menu it is removed from 
   //the menu and the new one added.
   this.addDishToMenu = function (dish) {
-    console.log(dish);
-    console.log(dish.Category);
     menu[dish.Category] = dish;
-    console.log(menu);
   }
 
   //Removes dish from menu
   this.removeDishFromMenu = function (id) {
-    _.reject(this.menu, function (dish) {
+    _.reject(menu, function (dish) {
       return dish.id === id;
     });
   }

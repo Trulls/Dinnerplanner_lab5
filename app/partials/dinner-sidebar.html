@@ -8,10 +8,13 @@
 		<div class="box col-xs-8">Dish</div>
 		<div class="box col-xs-4">Cost</div>
 	</div>
-	<div ng-repeat="dish in dishes"></div>
+	<div ng-repeat="dish in getFullMenu()">
+		<div class="col-xs-8">{{dish.Title}}</div>
+		<div class="col-xs-4">{{getDishPrice(dish)}}</div>
+	</div>
 	<div>
 		<div class="box col-xs-8">Total SEK</div>
-		<div class="box col-xs-4">{{getNumberOfGuests()}}</div>
+		<div class="box col-xs-4">{{getTotalMenuPrice()}}</div>
 	</div>
 	<div class="center-align">
 		<a href="#" class="btn start-btn">Confirm dinner</a>
