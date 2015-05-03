@@ -20,12 +20,19 @@ dinnerPlannerApp.controller('DinnerCtrl', function ($scope,Dinner) {
 	}
 
 	$scope.getDishPrice = function (dish) {
-		return Dinner.getPriceOfDish(dish);
+		return Dinner.getPriceOfDish(dish).toFixed(2);
 	}
 
 	$scope.getTotalMenuPrice = function () {
-		return Dinner.getTotalMenuPrice();
+		return Dinner.getTotalMenuPrice().toFixed(2);
 	}
 
+	$scope.confirmableDinner = function () {
+		var menu = $scope.getFullMenu();
+		for (var type in menu) {
+			if (hasOwnProperty.call(menu, type)) return true;
+		}
+		return false;
+	}
 
 });
