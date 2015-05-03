@@ -4,30 +4,30 @@
 	</div>
 	<div class="box col-xs-9">
 		<div class="top-box row">
-		  <div class="col-xs-12 subcolor">
-		  	<div><h2>SELECT DISH</h2></div>
-		    <div><hr class="divider"/></div>
-		    <div class="row flex">
-		    	<input ng-model="query" type="text" class="form" placeholder="Enter key words"/>
+			<div class="col-xs-12 subcolor">
+				<div><h2>SELECT DISH</h2></div>
+				<div><hr class="divider"/></div>
+				<div class="row flex">
+					<input ng-model="query" type="text" class="form" placeholder="Enter key words"/>
 					<button ng-click="search(query)">Find</button>
 				</div>
 				<div><p>{{status}}</p></div>
-		  </div>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 scrollable flex ">
-		  	<div ng-repeat="dish in dishes">
-		  		<a ng-href="#/dish/{{dish.RecipeID}}">
-			  		<div class="dish-container col-xs-3">
-			  			<div class="dish-box">
-			  				<img ng-src="{{dish.ImageURL}}"/>
-			  				<div class="dish-name">
-			  					{{dish.Title}}
-			  				</div>
-			  			</div>
-			  		</div>
-		  		</a>
-		  	</div>
+				<div ng-repeat="dish in dishes">
+					<a ng-href="#/dish/{{dish.RecipeID}}">
+						<div class="dish-container col-xs-3">
+							<div class="dish-box">
+								<img ng-src="{{dish.ImageURL}}"/>
+								<div class="dish-name">
+									{{dish.Title}}
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
