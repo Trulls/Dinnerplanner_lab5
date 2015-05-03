@@ -16,12 +16,6 @@ body, html {
   border: 1px solid black;
   border-radius: 3px;
 }
-.sub-content-box {
-  /* sub-content-box = box */
-}
-.spin-container {
-  /* spin-container = box */
-}
 .top-box {
   height: 50%;
   text-align: center;
@@ -29,23 +23,13 @@ body, html {
 }
 .info-box {
   background-color: white;
-  
   padding-bottom: 2em;
   margin-top: 6em;
-}
-.bottom-box {
-  /* bottom-box = scrollable */
 }
 
 /* BOX EXTRAS */
 .subcolor {
   background-color: rgba(247, 225, 134, 1);
-}
-.sub-header-container {
-  /* sub-header-container = subcolor */
-}
-.ingredient-box {
- /* ingredient-box = subcolor */ 
 }
 .scrollable {
   height: 70%;
@@ -57,25 +41,22 @@ body, html {
 .semi-opacity {
   opacity: 0.8;
 }
-.confirm-n-print-box{
-  /* confirm-n-print-box = top-padding */
-}
 .padded {
   height: 100%;
   padding: 10px 5px;
 }
-.selectdish {
-  /* selectdish = padded */
-}
 .center-align {
   text-align: center;
-}
-.button-container {
-  /* button-container = center-align */
 }
 .underline {
   border-bottom: 1px solid rgba(213, 203, 164, 0.9);
   margin: 0px;
+}
+.vertical-line {
+  border-left: 2px solid black;
+  padding-left: 20px;
+  padding-top: 200px;
+  height: 260px;
 }
 .flex {
   display: flex;
@@ -117,32 +98,6 @@ body, html {
   font-size: 1em;
   height: 50px;
 }
-.content-box {
-  background-color: white;
-  height: 85%;
-  border: 2px solid black;
-  border-radius: 3px;
-  margin-right: 1px;
-  margin-left: 1px;
-}
-
-.description-box {
-  overflow: scroll;
-  height: 100%;
-}
-.vertical-line {
-  border-left: 2px solid black;
-  padding-left: 20px;
-  padding-top: 200px;
-  height: 260px;
-}
-.mydinner-header {
-  display: inline-block;
-}
-.course-price {
-  color: maroon;
-  font-size: 18px;
-}
 
 /* FONTS */
 a {
@@ -161,6 +116,9 @@ a {
 .bold {
   font-family: BalsamiqSansBold;
 }
+.text-right {
+  text-align: right;
+}
 
 @font-face {
     font-family: BalsamiqSansRegular;
@@ -178,9 +136,6 @@ a {
     font-family: BalsamiqSansBoldItalic;
     src: url(Fonts/BalsamiqSansBoldItalic.ttf);
 }
-.text-right {
-  text-align: right;
-}
 
 /* DIVIDERS */
 hr.divider {
@@ -192,6 +147,7 @@ hr.divider {
   background-image: -ms-linear-gradient(left, #C9F, #63C, #C9F);
   background-image: -o-linear-gradient(left, #C9F, #63C, #C9F);
 }
+
 /* BUTTONS */
 .main-btn {
   background-color: rgba(233, 158, 82, 0.7);
@@ -203,9 +159,6 @@ hr.divider {
   box-shadow: 2px 2px 0px black;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-.start-btn {
-  /* start-btn = main-btn*/
 }
 .confirm-btn {
   background-color: rgba(63, 191, 63, 0.7);
