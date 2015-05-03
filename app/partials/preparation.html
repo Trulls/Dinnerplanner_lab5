@@ -6,7 +6,7 @@
   				<a ng-href="#/search" class="btn main-btn">Go back and edit dinner</a>
   			</div>
 		  	<div class="col-xs-8">
-		  		<div><h2>My dinner: {{getNumberOfGuests()}} guests</h2></div>
+		  		<div><h2>My dinner: {{getNumberOfGuests()}} people</h2></div>
 		  	</div>
 	  	</div>
 		</div>
@@ -14,16 +14,12 @@
 </div>
 <div class="box top-padding">
 	<div class="row" ng-repeat="dish in getFullMenu()">
-    <a class="col-xs-3 flex" ng-href="#/dish/{{dish.RecipeID}}">
-			<div class="dish-container">
-				<div class="dish-box">
-					<img ng-src="{{dish.ImageURL}}"/>
-					<div class="dish-name">
-						{{dish.Title}}
-					</div>
-				</div>
-			</div>
-		</a>
+		<div class="col-xs-3 center-align">
+			<h2>{{dish.Title}}</h2>
+			<a ng-href="#/dish/{{dish.RecipeID}}">
+		  	<img class="dish-box" ng-src="{{dish.ImageURL}}"/>
+		  </a>
+		</div>
     <div class="col-xs-3">
       <h3>Description</h3>
       <br/>

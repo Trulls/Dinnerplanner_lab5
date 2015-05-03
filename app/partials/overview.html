@@ -6,7 +6,7 @@
   				<a ng-href="#/search" class="btn main-btn">Go back and edit dinner</a>
   			</div>
 		  	<div class="col-xs-6">
-		  		<div><h2>My dinner: {{getNumberOfGuests()}} guests</h2></div>
+		  		<div><h2>My dinner: {{getNumberOfGuests()}} people</h2></div>
 		  	</div>
 		  	<div class="col-xs-3 center-align">
   				<a ng-href="#/preparation" class="btn main-btn confirm-btn">Continue to preparations</a>
@@ -15,7 +15,7 @@
 		</div>
 	</div>
 </div>
-<div class="box semi-opacity top-padding">
+<div class="box top-padding">
   <div class="row">
 		<div class="col-xs-9 scrollable flex ">
 			<div ng-repeat="dish in getFullMenu()">
