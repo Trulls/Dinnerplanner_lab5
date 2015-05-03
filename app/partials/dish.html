@@ -7,7 +7,8 @@ Instructions, Ingredients and total cost. -->
 	<div class="box col-xs-9">
 		<div class="row">
 		  <div class="container col-xs-6">
-		  	<h2>{{dish.Title}} ({{dish.Category}})</h2>
+		  	<h2>{{dish.Title}}</h2>
+		  	<h3>{{dish.Category}}</h3>
 		  	<img class="dish-box" ng-src="{{dish.ImageURL}}"/>
 		  	<h3>Description</h3>
 		  	<p>{{dish.Description}}</p>
@@ -16,7 +17,7 @@ Instructions, Ingredients and total cost. -->
 		  </div>
 		  <div class="box subcolor col-xs-6">
 		  	<h3>Ingredients for {{getNumberOfGuests()}} people</h3>
-		  	<div class="row" ng-repeat="ingredient in dish.Ingredients">
+		  	<div class="row underline" ng-repeat="ingredient in dish.Ingredients">
 		  		<div class="col-xs-1">{{ingredient.DisplayQuantity}}</div>
 		  		<div class="col-xs-3">{{ingredient.Unit}}</div>
 		  		<div class="col-xs-5">{{ingredient.Name}}</div>
@@ -31,8 +32,11 @@ Instructions, Ingredients and total cost. -->
 	  			<div class="col-xs-6 center-align">
 	  				<a ng-href="#/search" class="btn main-btn">Back to search</a>
 	  			</div>
-	  			<div class="col-xs-6 center-align">
+	  			<div ng-if="!isAddedToMenu()" class="col-xs-6 center-align">
 	  				<a ng-href="#/search" class="btn main-btn confirm-btn" ng-click="addDishToMenu()">Add dish to menu</a>
+	  			</div>
+	  			<div ng-if="isAddedToMenu()" class="col-xs-6 center-align">
+	  				<a ng-href="#/search" class="btn main-btn remove-btn" ng-click="removeDishFromMenu()">Remove from menu</a>
 	  			</div>
 	  		</div>
 		  </div>

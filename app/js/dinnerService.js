@@ -96,10 +96,18 @@ dinnerPlannerApp.factory('Dinner',function ($resource,$cookieStore) {
 	}
 
 	//Removes dish from menu
-	this.removeDishFromMenu = function (id) {
-		_.reject(menu, function (dish) {
-			return dish.id === id;
-		});
+	this.removeDishFromMenu = function (dish) {
+		delete menu[dish.Category];
+	}
+
+	//Checks if a specific dish is already added to the menu
+	this.isAddedToMenu = function (dish) {
+		if (menu.hasOwnProperty(dish.Category)) {
+			if (menu[dish.Category].RecipeID==dish.RecipeID) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 

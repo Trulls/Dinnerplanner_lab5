@@ -14,6 +14,14 @@ dinnerPlannerApp.controller('DishCtrl', function ($scope,$routeParams,Dinner) {
 		Dinner.addDishToMenu($scope.dish);
 	}
 
+	$scope.removeDishFromMenu = function () {
+		Dinner.removeDishFromMenu($scope.dish);
+	}
+
+	$scope.isAddedToMenu = function () {
+		return Dinner.isAddedToMenu($scope.dish);
+	}
+
 	$scope.getDishPrice = function () {
 		return Dinner.getPriceOfDish($scope.dish).toFixed(2);
 	}
