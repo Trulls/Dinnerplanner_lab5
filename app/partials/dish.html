@@ -21,7 +21,7 @@ Instructions, Ingredients and total cost. -->
 		  		<div class="col-xs-3">{{ingredient.Unit}}</div>
 		  		<div class="col-xs-5">{{ingredient.Name}}</div>
 		  		<div class="col-xs-1">SEK</div>
-		  		<div class="col-xs-1">{{ingredient.DisplayQuantity}}</div>
+		  		<div class="col-xs-1">{{getIngredientPrice(ingredient.Quantity)}}</div>
 		  	</div>
 		  	<hr class="divider"/>
 		  	<div class="row text-center">
