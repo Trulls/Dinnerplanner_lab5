@@ -4,19 +4,16 @@
 	</br>
 	</br>
 <div class="box subcolor padded">
-	<div class="row bold"><h4>
+	<div class="row underline bold"><h4>
 		<div class="col-xs-8">Dish</div>
 		<div class="col-xs-4">Cost</div>
 	</div>
-	<hr class="divider"/>
-	<div ng-repeat="dish in getFullMenu()">
+	<div class="underline" ng-repeat="dish in getFullMenu()">
 		<a ng-href="#/dish/{{dish.RecipeID}}" class="row">
 			<div class="col-xs-12 bold">{{dish.Category}}</div>
 			<div class="col-xs-8">{{dish.Title}}</div>
 			<div class="col-xs-4">{{getDishPrice(dish)}}</div>
 		</a>
-		<hr class="divider"/>
-		
 	</div>
 	<div class="row"><h4>
 		<div class="col-xs-8">Total SEK</div>
