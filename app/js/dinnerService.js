@@ -3,7 +3,7 @@
 // dependency on any service you need. Angular will insure that the
 // service is created first time it is needed and then just reuse it
 // the next time.
-dinnerPlannerApp.factory('Dinner',function ($resource) {
+dinnerPlannerApp.factory('Dinner',function ($resource,$cookieStore) {
   // TODO in Lab 5: Add your model code from previous labs
   // feel free to remove above example code
   // you will need to modify the model (getDish and getAllDishes) 
