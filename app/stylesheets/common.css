@@ -74,7 +74,8 @@ body, html {
   /* button-container = center-align */
 }
 .underline {
-  border-bottom: 10px solid black;
+  border-bottom: 1px solid black;
+  margin: 0px;
 }
 .flex {
   display: flex;
@@ -156,6 +157,9 @@ a {
   font-size: 1.5em;
   padding-top: 1em;
   font-family: BalsamiqSansItalic;
+}
+.bold {
+  font-family: BalsamiqSansBold;
 }
 
 @font-face {

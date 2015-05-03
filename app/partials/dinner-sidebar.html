@@ -1,23 +1,27 @@
-<h2>My Dinner <3</h2>
+<h2 class="center-align">My dinner</h2>
 	<div class="col-xs-8">Number of people</div>
 	<input class="col-xs-4" type="number" ng-model="numberOfGuests" ng-change="setNumberOfGuest(numberOfGuests)"/>
 	</br>
 	</br>
 <div class="box subcolor padded">
-	<div>
-		<div class="box col-xs-8">Dish</div>
-		<div class="box col-xs-4">Cost</div>
+	<div class="row bold"><h4>
+		<div class="col-xs-8">Dish</div>
+		<div class="col-xs-4">Cost</div>
 	</div>
-	<div class="" ng-repeat="dish in getFullMenu()">
-		<a ng-href="#/dish/{{dish.RecipeID}}" class="underline">
+	<hr class="divider"/>
+	<div ng-repeat="dish in getFullMenu()">
+		<a ng-href="#/dish/{{dish.RecipeID}}" class="row">
+			<div class="col-xs-12 bold">{{dish.Category}}</div>
 			<div class="col-xs-8">{{dish.Title}}</div>
 			<div class="col-xs-4">{{getDishPrice(dish)}}</div>
 		</a>
+		<hr class="divider"/>
+		
 	</div>
-	<div>
-		<div class="box col-xs-8">Total SEK</div>
-		<div class="box col-xs-4">{{getTotalMenuPrice()}}</div>
-	</div>
+	<div class="row"><h4>
+		<div class="col-xs-8">Total SEK</div>
+		<div class="col-xs-4">{{getTotalMenuPrice()}}</div>
+	</h4></div>
 	<div class="center-align">
 		<a ng-if="confirmableDinner()" ng-href="#/overview" class="btn main-btn confirm-btn">Confirm menu</a>
 	</div>
