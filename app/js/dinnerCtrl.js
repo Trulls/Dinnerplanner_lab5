@@ -17,8 +17,16 @@ dinnerPlannerApp.controller('DinnerCtrl', function ($scope,Dinner) {
 		return Dinner.getFullMenu();
 	}
 
+	$scope.getAllIngredients = function () {
+		return Dinner.getAllIngredients();
+	}
+
 	$scope.getDishPrice = function (dish) {
 		return Dinner.getPriceOfDish(dish).toFixed(2);
+	}
+	
+	$scope.getIngredientQuantity = function (quantity) {
+		return (quantity * $scope.getNumberOfGuests());
 	}
 
 	$scope.getTotalMenuPrice = function () {

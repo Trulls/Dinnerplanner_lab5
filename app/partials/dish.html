@@ -16,7 +16,7 @@
 		  <div class="box subcolor col-xs-6">
 		  	<h3>Ingredients for {{getNumberOfGuests()}} people</h3>
 		  	<div class="row underline" ng-repeat="ingredient in dish.Ingredients">
-		  		<div class="col-xs-1">{{ingredient.DisplayQuantity}}</div>
+		  		<div class="col-xs-1">{{getIngredientQuantity(ingredient.Quantity)}}</div>
 		  		<div class="col-xs-3">{{ingredient.Unit}}</div>
 		  		<div class="col-xs-5">{{ingredient.Name}}</div>
 		  		<div class="col-xs-1">SEK</div>

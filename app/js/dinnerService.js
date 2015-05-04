@@ -62,9 +62,11 @@ dinnerPlannerApp.factory('Dinner',function ($resource,$cookieStore) {
 	this.getAllIngredients = function () {
 		ingredients = [];
 		_.each(menu, function (dish) {
-			ingredients.push(_.pluck(dish.ingredients, 'name'));
+			_.each(dish.Ingredients, function (ingredient) {
+				ingredients.push(ingredient);
+			});
 		});
-		return _.uniq(_.flatten(ingredients));
+		return _.uniq(ingredients);
 	};
 
 	// Returns the price of a specific dish (all the 

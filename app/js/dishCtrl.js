@@ -25,7 +25,11 @@ dinnerPlannerApp.controller('DishCtrl', function ($scope,$routeParams,Dinner) {
 		return Dinner.getPriceOfDish($scope.dish).toFixed(2);
 	}
 
+	$scope.getIngredientQuantity = function (quantity) {
+		return (quantity * $scope.getNumberOfGuests());
+	}
+
 	$scope.getIngredientPrice = function (quantity) {
-		return quantity.toFixed(2);
+		return (quantity * $scope.getNumberOfGuests()).toFixed(2);
 	}
 });
